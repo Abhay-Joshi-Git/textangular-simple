@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html editor with angular</title>
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.css">
+	<link rel='stylesheet' href='/bower_components/textAngular/dist/textAngular.css'>
+	<link rel="stylesheet" href="./main.css" >
+</head>
+<body>
+	<h1>HTML Editor</h1>
+	<div id="app" ng-app="app">
+		<div ng-controller="test">
+			<button class="btn btn-info" ng-click="testfun()">Test</button>			
+		</div>
+
+
+		<div ng-controller="main">
+			
+			<div>
+				<button class="btn btn-info" ng-click="appendTable()">Add Table</button>
+				<!--<button ng-click="console.log('test')">Add Table</button>-->
+			</div>
+			
+			<div text-angular="text-angular" 
+				name="htmlcontent" 
+				ng-model="htmlcontent" 
+				ta-disabled='disabled'
+				ta-toolbar="toolbar">
+			</div>
+
+
+			<div>
+				<textarea style="height:400px; width:400px;" ng-model="htmlcontent">
+				</textarea>
+			</div>
+
+		</div>
+
+
+	</div>
+	<script src="/bower_components/lodash/dist/lodash.min.js"></script>
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src='/bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+	<script src='/bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+	<script src='/bower_components/textAngular/dist/textAngular.min.js'></script>	
+	<script src="./js/main.js"></script>
+	<script src="./js/test.js"></script>
+
+</body>
+</html>
