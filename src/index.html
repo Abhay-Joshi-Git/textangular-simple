@@ -18,10 +18,29 @@
 		<div ng-controller="main">
 			
 			<div>
-				<button class="btn btn-info" ng-click="appendTable()">Add Table</button>
-				<!--<button ng-click="console.log('test')">Add Table</button>-->
+				<button class="btn btn-info" ng-click="appendTable()">Add Table</button>				
 			</div>
-			
+
+			<div class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" type="button" 
+					data-toggle="dropdown">
+					<i class="fa fa-table"></i>					
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" ng-click="inputClick($event)">
+					<li><input ng-model="noRowsTblCreation" ng-click="inputClick($event)" placeholder="number of rows"/></li>
+					<li><input ng-model="noColsTblCreation" ng-click="inputClick($event)" placeholder="number of columns"/></li>
+				</ul>
+			</div>
+
+			<!--<div>
+				<button class="btn btn-primary" type="button" 
+
+					>
+					<i class="fa fa-table"></i>					
+				</button>
+			</div>	-->
+
 			<div text-angular="text-angular" 
 				name="htmlcontent" 
 				ng-model="htmlcontent" 

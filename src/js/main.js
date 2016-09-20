@@ -30,4 +30,9 @@ var tableHTML = '<table border="1" ><tbody> ' +
 				$scope.htmlcontent = $scope.htmlcontent + tableHTML;
 			};
 
+			$scope.inputClick = function(event) {
+				console.log(event);
+				event.preventDefault();
+			}
+
         }]);
